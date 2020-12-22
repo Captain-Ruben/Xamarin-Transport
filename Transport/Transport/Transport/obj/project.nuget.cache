@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Rx+xtdThoM1IEeTe95TVjVTioiTK5+kbH5D1XfZxQK6+QVHo4U0W7HqpNr+iIf0Tre59Dd1XdKIabFsNi20qA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ruben\\Documents\\GitHub\\MobileApp-Transport\\Transport\\Transport\\Transport\\Transport.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ruben\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512"
+  ],
+  "logs": []
+}
