@@ -20,3 +20,5 @@ Met deze app zou ik graag het papier werk van mijn vader wegnemen.
 - Moet er een mogelijkheid zijn om dit ritverslag te versturen zijn naar de baas van het bedrijf.
 - Moet dit ritverslag 30dagen opgeslagen blijven zodat dit nog opvraagbaar blijft.
 
+### Timeline
+- 22/12/2020 | Introduction to Xamarin.Forms
