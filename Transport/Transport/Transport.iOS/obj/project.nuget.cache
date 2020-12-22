@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uD0lRGp4TUAAGk+ldxGoRGITlKyik/l+G5ddQUmdk+/bd25hW93DNifu0/jUmA3E26R3+ivV5Kh2FZEfbp7hJg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ruben\\Documents\\GitHub\\MobileApp-Transport\\Transport\\Transport\\Transport.iOS\\Transport.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}
