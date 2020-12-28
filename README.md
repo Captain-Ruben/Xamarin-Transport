@@ -25,3 +25,4 @@ Met deze app zou ik graag het papier werk van mijn vader wegnemen.
 - 27/12/2020 | Data Binding in Xamarin.Forms | Pluralsight
 - 27/12/2020 | Building an Enterprise Mobile Application with Xamarin.Forms 1/2 | Pluralsight
 - 28/12/2020 | Building an Enterprise Mobile Application with Xamarin.Forms 2/2 | Pluralsight
+- 28/12/2020 | Project als Console App Maken 
