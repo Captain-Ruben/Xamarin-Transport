@@ -1,0 +1,13 @@
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.exe
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.deps.json
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.runtimeconfig.json
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.runtimeconfig.dev.json
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\bin\Debug\netcoreapp3.1\TransportConsole.pdb
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.csprojAssemblyReference.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.AssemblyInfoInputs.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.AssemblyInfo.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.pdb
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Documentatie\TransportConsole\TransportConsole\obj\Debug\netcoreapp3.1\TransportConsole.genruntimeconfig.cache
