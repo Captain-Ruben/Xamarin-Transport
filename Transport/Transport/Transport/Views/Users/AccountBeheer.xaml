@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Transport.Views.AccountBeheer">
+    <ContentPage.Content>
+        <Grid >
+            <!--<Image>HIER KOMT EEN ACHTERGROND</Image>-->
+            <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#eeeff3" 
+                   HorizontalOptions="Center" 
+                   WidthRequest="200"
+                   HeightRequest="300"
+                   Margin="30"
+                   HasShadow="True">
+
+                    <StackLayout VerticalOptions="Center">
+                            <Button Text="Login" 
+                            BackgroundColor="#029fd6" 
+                            TextColor="#eeeff3"
+                            Command="{Binding LoginButton}"/>
+
+
+                        <Button Text="Registreren" 
+                            BackgroundColor="#029fd6" 
+                            TextColor="#eeeff3"
+                            Command="{Binding RegistrerenButton}"/>
+                        
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
