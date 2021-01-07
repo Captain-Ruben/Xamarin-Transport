@@ -5,7 +5,8 @@
     <ContentPage.Content>
 
         <ScrollView>
-        <StackLayout VerticalOptions="Center" Margin="30">
+            
+        <StackLayout VerticalOptions="Start" Margin="30">
 
 
                 <Label Text="Naam:" 
@@ -33,12 +34,14 @@
 
                         <Entry IsPassword="True"
                    x:Name="Wachtwoord_R2"/>
-
-                        <Button Text="Registreren" 
+            
+                <Button Text="Registreren" 
                     BackgroundColor="#029fd6" 
                     TextColor="#eeeff3"
                     Command="{Binding RegistrerenButton}"/>
-        </StackLayout>
+
+            </StackLayout>
+
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

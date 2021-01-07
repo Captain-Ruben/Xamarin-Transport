@@ -10,8 +10,10 @@ namespace Transport
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Login());
+            MainPage = new NavigationPage(new KlantenOverzicht());
         }
+
+
 
         protected override void OnStart()
         {

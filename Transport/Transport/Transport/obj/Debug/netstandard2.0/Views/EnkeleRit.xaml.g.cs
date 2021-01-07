@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Transport.Views.Users.AccountBeheer.xaml", "Views/Users/AccountBeheer.xaml", typeof(global::Transport.Views.AccountBeheer))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Transport.Views.EnkeleRit.xaml", "Views/EnkeleRit.xaml", typeof(global::Transport.Views.EnkeleRit))]
 
 namespace Transport.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Users\\AccountBeheer.xaml")]
-    public partial class AccountBeheer : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\EnkeleRit.xaml")]
+    public partial class EnkeleRit : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AccountBeheer));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(EnkeleRit));
         }
     }
 }

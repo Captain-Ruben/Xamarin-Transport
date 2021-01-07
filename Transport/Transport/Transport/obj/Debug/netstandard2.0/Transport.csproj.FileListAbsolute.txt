@@ -11,6 +11,9 @@ C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transpor
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Transport.dll
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\ref\Transport.dll
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Transport.pdb
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\Users\AccountBeheer.xaml.g.cs
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\Users\Login.xaml.g.cs
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\Users\Registreren.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\KlantenOverzicht.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\RitEnkel.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\RittenOverzicht.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\Transport\Transport\Transport\obj\Debug\netstandard2.0\Views\RitVerslag.xaml.g.cs

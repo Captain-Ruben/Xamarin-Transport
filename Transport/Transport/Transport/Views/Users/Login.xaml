@@ -35,7 +35,7 @@
                             Command="{Binding LoginButton}"/>
 
 
-                            <Button x:Name="btnAccountBeheer" Text="Account Beheer" 
+                            <Button x:Name="btnAccountBeheer" Text="Registreren" 
                             BackgroundColor="#eeeff3" 
                             TextColor="#029fd6"
                             Command="{Binding AccountButton}"/>

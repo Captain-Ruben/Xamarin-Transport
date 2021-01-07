@@ -26,10 +26,7 @@ namespace Transport.Views
         {
             if (await VallidationRegistrerenAsync())
             {
-                UserName_R.Text = "";
-                Wachtwoord_R.Text = "";
-                Email_R.Text = "";
-                Wachtwoord_R2.Text = "";
+                Console.WriteLine("Error: Input not Valid");
             }
             else
             {
@@ -43,11 +40,8 @@ namespace Transport.Views
                 Email_R.Text = "";
                 Wachtwoord_R2.Text = "";
 
-
                 await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new Login()));
             }
-
-
         }
 
         public async Task<bool> VallidationRegistrerenAsync()
@@ -55,24 +49,43 @@ namespace Transport.Views
             bool error = false;
             string melding = "";
 
+            bool usernameBool = true;
+            bool emailBool = true;
+            bool wachtwoordBool = true; 
+
             //Username
-            if (UserName_R.Text == null) { melding += "Username: ERROR \r\n"; error = true; }
+            if (UserName_R.Text == null) { melding += "Username: ERROR \r\n"; usernameBool = false; }
             else { melding += "Username: CORRECT \r\n"; }
 
             //Email
-            if (Email_R.Text == null) { melding += "Email: ERROR \r\n"; error = true; }
-            else if (!Email_R.Text.Contains("@")) { melding += "Email: ERROR \r\n Email bevat geen @ \r\n"; }
+            if (Email_R.Text == null) { melding += "Email: ERROR \r\n"; emailBool = false; }
+            else if (!Email_R.Text.Contains("@")) { melding += "Email: ERROR \r\n Email bevat geen @ \r\n"; emailBool = false; }
             else { melding += "Email: CORRECT \r\n"; }
 
             //Wachtwoord
-            if (Wachtwoord_R.Text == null) { melding += "Wachtwoord: ERROR \r\n"; error = true; }
-            else if (Wachtwoord_R.Text != Wachtwoord_R2.Text) { melding += "Wachtwoord: ERROR \r\n Wachtwoorden komen niet overeen \r\n"; error = true; }
-            else if (Wachtwoord_R.Text.Length < 5) { melding += "Wachtwoord: ERROR \r\n Wachtwoord moet minstens 5 tekens hebben \r\n"; error = true; }
-            else if (!Wachtwoord_R.Text.Any(c => char.IsDigit(c))) {melding += "Wachtwoord: ERROR \r\n Minstens 1 cijfer hebben \r\n"; error = true; }
+            if (Wachtwoord_R.Text == null) { melding += "Wachtwoord: ERROR \r\n"; wachtwoordBool = false; }
+            else if (Wachtwoord_R.Text != Wachtwoord_R2.Text) { melding += "Wachtwoord: ERROR \r\n Wachtwoorden komen niet overeen \r\n"; wachtwoordBool = false; }
+            else if (Wachtwoord_R.Text.Length < 5) { melding += "Wachtwoord: ERROR \r\n Wachtwoord moet minstens 5 tekens hebben \r\n"; wachtwoordBool = false; }
+            else if (!Wachtwoord_R.Text.Any(c => char.IsDigit(c))) {melding += "Wachtwoord: ERROR \r\n Minstens 1 cijfer hebben \r\n"; wachtwoordBool = false; }
             else { melding += "Wachtwoord: CORRECT \r\n";}
 
-            if (error == true)
+            if (usernameBool == false || emailBool == false || wachtwoordBool == false)
             {
+                error = true; 
+                if (usernameBool == false)
+                {
+                    UserName_R.Text = "";
+                }
+                if (emailBool == false)
+                {
+                    Email_R.Text = "";
+                }
+                if (wachtwoordBool == false)
+                {
+                    Wachtwoord_R.Text = "";
+                    Wachtwoord_R2.Text = "";
+                }
+
                 await DisplayAlert("Registratie Overzicht", melding, "OK");
             }
 

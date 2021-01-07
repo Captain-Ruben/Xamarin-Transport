@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Transport.Views.KlantenOverzicht">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame BackgroundColor="#029fd6" VerticalOptions="Start">
+                <StackLayout>
+                    <StackLayout>
+                        <Entry Placeholder="Klant" Margin="10" Text="{Binding KlantNaam}" PlaceholderColor="#eeeff3" TextColor="#eeeff3"></Entry>
+                        <Entry Placeholder="Plaats" Margin="10" Text="{Binding KlantPlaats}" PlaceholderColor="#eeeff3" TextColor="#eeeff3"></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Command="{Binding KlantBewerkenCommand}" Text="Aanpassen" BackgroundColor="#029fd6" TextColor="#eeeff3"/>
+                        <Button Command="{Binding KlantToevoegenCommand}" Text="Toevoegen" BackgroundColor="#eeeff3" TextColor="#029fd6"/>
+                        <Button Command="{Binding KlantVerwijderenCommand}" Text="Verwijderen" BackgroundColor="#029fd6" TextColor="#eeeff3"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            
+            <ListView x:Name="lstKlanten"                     
+                      ItemsSource="{Binding Klanten}"
+                      Margin="10" 
+                      SelectedItem="{Binding KlantGeselecteerd}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Naam}" FontSize="Title"/>
+                                <Label Text="{Binding Plaats}" FontSize="Small"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

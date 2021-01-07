@@ -14,8 +14,6 @@ namespace Transport.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-
-
         public ICommand AccountButton => new Command(AccountBeheer);
         public ICommand LoginButton => new Command(LoginToApp);
 
@@ -27,7 +25,7 @@ namespace Transport.Views
 
         private async void AccountBeheer()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new AccountBeheer()));
+            await Application.Current.MainPage.Navigation.PushAsync(new Registreren());
         }
 
         private async void LoginToApp()
@@ -53,7 +51,7 @@ namespace Transport.Views
 
             if (GetUser.Count() > 0)
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new AccountBeheer()));
+                await Application.Current.MainPage.Navigation.PushAsync(new RittenOverzicht());
             }
             else
             {
