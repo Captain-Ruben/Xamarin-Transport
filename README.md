@@ -20,11 +20,3 @@ Met deze app zou ik graag het papier werk van mijn vader wegnemen.
 - Moet er een mogelijkheid zijn om dit ritverslag te versturen zijn naar de baas van het bedrijf.
 - Moet dit ritverslag 30dagen opgeslagen blijven zodat dit nog opvraagbaar blijft.
 
-### Timeline
-- 22/12/2020 | Introduction to Xamarin.Forms | Pluralsight
-- 27/12/2020 | Data Binding in Xamarin.Forms | Pluralsight
-- 27/12/2020 | Building an Enterprise Mobile Application with Xamarin.Forms 1/2 | Pluralsight
-- 28/12/2020 | Building an Enterprise Mobile Application with Xamarin.Forms 2/2 | Pluralsight
-- 28/12/2020 | Project als Console App Maken
-- 29/12/2020 | Creating Responsive Layouts in Xamarin.Forms | Pluralsight
-- 29/12/2020 | App Zonder Code Maken (Opmaak) 
