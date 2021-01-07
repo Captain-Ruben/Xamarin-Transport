@@ -1,0 +1,16 @@
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\AppTransport.deps.json
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\AppTransport.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\ref\AppTransport.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\AppTransport.pdb
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.csprojAssemblyReference.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.AssemblyInfoInputs.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.AssemblyInfo.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\ref\AppTransport.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.pdb
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\Views\KlantenOverzicht.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\Views\UserLogin.xaml.g.cs
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\Views\UserRegistreren.xaml.g.cs

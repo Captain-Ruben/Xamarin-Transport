@@ -1,11 +1,14 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Transport.Models
 {
-    class Klant
+    class Klant 
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string Naam { get; set; }
         public string Plaats { get; set; }
     }

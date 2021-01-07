@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTransport.Android", "AppTransport\AppTransport.Android\AppTransport.Android.csproj", "{1AF7EF59-01B4-45F6-B961-56C287420759}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTransport", "AppTransport\AppTransport\AppTransport.csproj", "{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF7EF59-01B4-45F6-B961-56C287420759}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A34EE67-0787-43FE-B85C-B2600D9B6F3F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C939E0C-3A04-4D6A-B759-FD3B49356D22}
+	EndGlobalSection
+EndGlobal

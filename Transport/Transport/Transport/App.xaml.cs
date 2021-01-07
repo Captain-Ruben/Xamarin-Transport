@@ -7,13 +7,12 @@ namespace Transport
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();
             MainPage = new NavigationPage(new KlantenOverzicht());
         }
-
-
 
         protected override void OnStart()
         {
@@ -26,5 +25,6 @@ namespace Transport
         protected override void OnResume()
         {
         }
+
     }
 }
