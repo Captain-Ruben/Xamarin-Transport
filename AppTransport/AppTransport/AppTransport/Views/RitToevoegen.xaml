@@ -4,9 +4,110 @@
              x:Class="AppTransport.Views.RitToevoegen">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout>
+                <Frame BackgroundColor="#029fd6" 
+                       VerticalOptions="Start">
+                    
+                    <Label Text="RIT TOEVOEGEN" 
+                           FontSize="Title" 
+                           HorizontalOptions="Center" 
+                           TextColor="Snow"/>
+                    
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                
+                <Picker Title="Kies Hier Een Klant"     
+                        WidthRequest="225" 
+                        ItemsSource="{Binding KlantenList}" 
+                        ItemDisplayBinding="{Binding Naam}"
+                        SelectedItem="{Binding SelectedKlantItem, Mode=TwoWay}">
+                </Picker>
+
+                <StackLayout Orientation="Horizontal" 
+                             VerticalOptions="Center" 
+                             HorizontalOptions="Center">
+
+                    <Button Command="{Binding ButtonKlanten}" 
+                            BackgroundColor="#029fd6" 
+                            TextColor="Snow" HorizontalOptions="End" 
+                            Text="Klanten Beheren" 
+                            WidthRequest="150">
+                    </Button>
+
+                    <Button Command="{Binding ButtonKlantenUpdate}" 
+                            BackgroundColor="#029fd6" 
+                            TextColor="Snow" 
+                            HorizontalOptions="End" 
+                            Text="Klanten Updaten" 
+                            WidthRequest="150">
+                    </Button>
+                </StackLayout>
+                
+                <Entry Text="{Binding EntryKilometers}" 
+                       Placeholder="Kilometers" 
+                       HorizontalOptions="Center" 
+                       WidthRequest="375">
+                </Entry>
+                
+                <StackLayout HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding EntryAankomst}" 
+                               Placeholder="Aankomst" 
+                               WidthRequest="225">
+                        </Entry>
+
+                        <Button Command="{Binding ButtonTimeNowAankomst}"  
+                                BackgroundColor="#029fd6" 
+                                TextColor="Snow"
+                                HorizontalOptions="End" 
+                                Text="Nu" 
+                                WidthRequest="150">
+                        </Button>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding EntryVertrek, Mode=TwoWay}" 
+                               Placeholder="Vertrek" 
+                               WidthRequest="225">
+                        </Entry>
+
+                        <Button Command="{Binding ButtonTimeNowVertrek}" 
+                                BackgroundColor="#029fd6" 
+                                TextColor="Snow" 
+                                HorizontalOptions="End" 
+                                Text="Nu" 
+                                WidthRequest="150">
+                        </Button>
+                    </StackLayout>
+
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Palletten (optioneel):" 
+                           VerticalOptions="Center"
+                           WidthRequest="125">
+                    
+                    </Label>
+                    <Entry Text="{Binding EntryPaletten}" 
+                           Placeholder="Paletten" 
+                           HorizontalOptions="Center"
+                           WidthRequest="225"
+                           />
+
+                </StackLayout>
+                
+                <Button Command="{Binding ButtonOpslaan}" 
+                        BackgroundColor="#029fd6" 
+                        TextColor="Snow" 
+                        HorizontalOptions="Center" 
+                        Text="Rit Opslaan">
+                </Button>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

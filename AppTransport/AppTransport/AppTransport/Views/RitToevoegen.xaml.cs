@@ -15,8 +15,8 @@ namespace AppTransport.Views
     {
         public RitToevoegen()
         {
-            InitializeComponent();
             BindingContext = new RitViewModel();
+            InitializeComponent();
         }
     }
 }

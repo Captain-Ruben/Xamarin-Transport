@@ -16,9 +16,10 @@ namespace AppTransport
         public static string FilePath;
         public App(string filePath)
         {
-            InitializeComponent();
-            MainPage = new NavigationPage(new UserLogin());
             FilePath = filePath;
+            InitializeComponent();
+            MainPage = new NavigationPage(new RitToevoegen());
+     
         }
 
 

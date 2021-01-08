@@ -51,7 +51,6 @@ namespace AppTransport.Views
 
             if (GetUser.Count() > 0)
             {
-                
                 await Application.Current.MainPage.Navigation.PushAsync(new KlantenOverzicht());
             }
             else

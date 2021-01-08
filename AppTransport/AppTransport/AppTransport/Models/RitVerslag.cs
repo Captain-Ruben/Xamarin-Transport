@@ -11,5 +11,6 @@ namespace AppTransport.Models
         [PrimaryKey, AutoIncrement]
         public int RitverslagId { get; set; }
         public ObservableCollection<Rit> RitVerslagList {get; set;}
+        public bool GesloteRitverslag { get; set; }
     }
 }
