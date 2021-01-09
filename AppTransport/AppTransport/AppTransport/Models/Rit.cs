@@ -23,7 +23,6 @@ namespace AppTransport.Models
         public string Rijtijd { get; set; }
         public int Paletten { get; set; }
         public DateTime AanmaakDatumRit { get; set; }
-        public int RitVerslagId { get; set; }
 
     }
 }

@@ -51,10 +51,10 @@ namespace AppTransport.Views
 
             if (GetUser.Count() > 0)
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new KlantenOverzicht());
+                await Application.Current.MainPage.Navigation.PushAsync(new RitVerslag());
             }
             else
-            {
+            { 
                 await DisplayAlert("Login Fout", "De Inloggegevens kloppen niet probeer het opnieuw", "OK");
             }
         }

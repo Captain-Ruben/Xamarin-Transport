@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -21,24 +22,53 @@ namespace AppTransport.ViewModels
         {
                 try
                 {
-                    Rit rit = new Rit()
-                    {
-                        KlantNaam = SelectedKlantItem.Naam,
-                        Plaats = SelectedKlantItem.Plaats,
-                        Kilometers = Convert.ToInt32(EntryKilometers),
-                        Aankomst = DateTime.Parse(EntryAankomst),
-                        Vertrek = DateTime.Parse(EntryVertrek),
-                        Werktijd = (Convert.ToDateTime(EntryVertrek).ToUniversalTime() - Convert.ToDateTime(EntryAankomst).ToUniversalTime()).ToString(),
-                        //Rijtijd = , 
-                        Paletten = Convert.ToInt32(EntryPaletten),
-                        //RitVerslagId = 
+                Rit rit = new Rit()
+                {
+                    KlantNaam = SelectedKlantItem.Naam,
+                    Plaats = SelectedKlantItem.Plaats,
+                    Kilometers = Convert.ToInt32(EntryKilometers),
+                    Aankomst = DateTime.Parse(EntryAankomst),
+                    Vertrek = DateTime.Parse(EntryVertrek),
+                    Werktijd = (Convert.ToDateTime(EntryVertrek).ToUniversalTime() - Convert.ToDateTime(EntryAankomst).ToUniversalTime()).ToString(),
+                    Paletten = Convert.ToInt32(EntryPaletten),
                     };
+                    
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.Table<Rit>();
+                    List<Rit> ritList = new List<Rit>();
+                    ritList = conn.Table<Rit>().ToList();
+
+
+                    rit.Rijtijd = RijTijdInlade(rit, ritList);
+                    Console.WriteLine(rit);
+                    conn.CreateTable<Rit>();
+                    conn.Insert(rit);
+
+                    Console.WriteLine(rit);
+
+                    await Application.Current.MainPage.Navigation.PushAsync(new RitVerslag());
                 }
+            }
 
                 catch (Exception e)
                 {
                     await Application.Current.MainPage.DisplayAlert("ERROR", e.Message, "Ok"); ;
                 }
+        }
+        private string RijTijdInlade(Rit rit, List<Rit> ritList)
+        {
+     
+            if (ritList.Count() == 0)
+            {
+                return "00:00:00";
+            }
+            else
+            {
+                ritList.OrderBy(x => x.RitId);
+                Rit laatsteRit = ritList.Last();
+                return (rit.Aankomst - laatsteRit.Vertrek).ToString();
+            }
         }
         public ICommand ButtonTimeNowAankomst => new Command(TimeNowAankomst);
         private void TimeNowAankomst()

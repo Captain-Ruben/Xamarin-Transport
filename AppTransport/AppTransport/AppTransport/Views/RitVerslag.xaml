@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTransport.Views.RitVerslag">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Frame BackgroundColor="#029fd6" 
+                       VerticalOptions="Start">
+
+                    <Label Text="RITVERSLAG" 
+                           FontSize="Title" 
+                           HorizontalOptions="Center" 
+                           TextColor="Snow"/>
+
+                </Frame>
+
+                <SearchBar SearchCommand="{Binding CommandSearchbarChanged}" 
+                           Text="{Binding SearchbarText}"
+                           HorizontalOptions="Center">
+                </SearchBar>
+
+                <ListView x:Name="lstRitten"                     
+                          ItemsSource="{Binding ListViewRitten}"
+                          Margin="10"
+                          SeparatorColor="#029fd6"
+                          SelectedItem="{Binding }">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding KlantNaam}" FontSize="Title"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+                <Button Text="Mailen"
+                        BackgroundColor="#029fd6"
+                        TextColor="Snow"
+                        Command="{Binding CommandMailRitVerslag}">
+                </Button>
+                
+                <Button Text="Toevoegen"
+                        BackgroundColor="#029fd6"
+                        TextColor="Snow"
+                        Command="{Binding CommandToevoegenRit}">
+                </Button>
+                
+                <Button Text="Nieuw"
+                        BackgroundColor="#029fd6"
+                        TextColor="Snow"
+                        Command="{Binding CommandNieuwRitVerslag}">
+                </Button>
+
+                <StackLayout></StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

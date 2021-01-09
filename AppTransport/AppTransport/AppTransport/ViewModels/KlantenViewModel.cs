@@ -4,13 +4,14 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace AppTransport.ViewModels
 {
-    class KlantenViewModel
+    class KlantenViewModel : INotifyPropertyChanged
     {
         #region Commands
         //Commands
@@ -29,6 +30,8 @@ namespace AppTransport.ViewModels
         #endregion
 
         #region Prop
+
+        public event PropertyChangedEventHandler PropertyChanged;
         private ObservableCollection<Klant> klanten = new ObservableCollection<Klant>();
         public ObservableCollection<Klant> Klanten
         {
@@ -73,6 +76,10 @@ namespace AppTransport.ViewModels
 
                 KlantNaam = "";
                 KlantPlaats = "";
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantNaam)));
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantPlaats)));
+
+
             }
 
         }
@@ -99,22 +106,40 @@ namespace AppTransport.ViewModels
         {
             //LIST
             int plaatsGeselecteerd = klanten.IndexOf(KlantGeselecteerd);
-            klanten.Remove(KlantGeselecteerd);
-
-            klanten.Add(new Klant() { Naam = KlantNaam, Plaats = KlantPlaats });
-            int plaatsNieuw = klanten.Count;
-
-            klanten.Move(plaatsNieuw - 1, plaatsGeselecteerd);
-
-            //DATABASE
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            if (plaatsGeselecteerd == -1)
             {
-                conn.CreateTable<Klant>();
-                conn.Table<Klant>().Where(x => x.Id == KlantGeselecteerd.Id).Delete();
+                KlantNaam = "";
+                KlantPlaats = "";
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantNaam)));
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantPlaats)));
 
-                conn.CreateTable<Klant>();
-                conn.Insert(new Klant() { Id=KlantGeselecteerd.Id, Naam=KlantNaam, Plaats=KlantPlaats });
             }
+            else
+            {
+                klanten.Remove(KlantGeselecteerd);
+
+                klanten.Add(new Klant() { Naam = KlantNaam, Plaats = KlantPlaats });
+                int plaatsNieuw = klanten.Count;
+
+                klanten.Move(plaatsNieuw - 1, plaatsGeselecteerd);
+
+                //DATABASE
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.CreateTable<Klant>();
+                    conn.Table<Klant>().Where(x => x.Id == KlantGeselecteerd.Id).Delete();
+
+                    conn.CreateTable<Klant>();
+                    conn.Insert(new Klant() { Id = KlantGeselecteerd.Id, Naam = KlantNaam, Plaats = KlantPlaats });
+                }
+
+                KlantNaam = "";
+                KlantPlaats = "";
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantNaam)));
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantPlaats)));
+
+            }
+
         }
 
         #endregion

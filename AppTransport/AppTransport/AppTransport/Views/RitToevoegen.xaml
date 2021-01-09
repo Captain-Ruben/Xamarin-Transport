@@ -16,14 +16,16 @@
                     
                 </Frame>
             </StackLayout>
-
+            
+            <ScrollView>
             <StackLayout>
                 
                 <Picker Title="Kies Hier Een Klant"     
                         WidthRequest="225" 
                         ItemsSource="{Binding KlantenList}" 
                         ItemDisplayBinding="{Binding Naam}"
-                        SelectedItem="{Binding SelectedKlantItem, Mode=TwoWay}">
+                        SelectedItem="{Binding SelectedKlantItem, Mode=TwoWay}"
+                        Margin="20">
                 </Picker>
 
                 <StackLayout Orientation="Horizontal" 
@@ -107,7 +109,8 @@
                         Text="Rit Opslaan">
                 </Button>
             </StackLayout>
-
+            </ScrollView>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
