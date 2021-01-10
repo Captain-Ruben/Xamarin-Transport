@@ -18,3 +18,5 @@ Met deze app zou ik graag het papier werk van mijn vader wegnemen.
 ### Wanneer de levering bij alle klanten is gebeurd:
 - Moet er een mogelijkheid zijn om dit ritverslag te versturen zijn naar de baas van het bedrijf.
 
+### Video 
+https://www.youtube.com/watch?v=272hji1JOac
