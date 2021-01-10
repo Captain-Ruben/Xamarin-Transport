@@ -126,17 +126,26 @@ namespace AppTransport.ViewModels
         public ICommand CommandMailRitVerslag => new Command(MailButtonAsync);
         private async void MailButtonAsync() 
         {
-            string body = "---";
-            foreach (var rit in listViewRitten)
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet)
             {
-                body += 
-                    $"\t\n Klant: {rit.KlantNaam} \t\n Plaats: {rit.Plaats} \t\n Km: {rit.Kilometers} \t\n Aankomst: {(rit.Aankomst).ToString("HH:mm")} \t\n Vertrek: {rit.Vertrek.ToString("HH:mm")} \t\n Werktijd: {rit.Werktijd} \t\n Rijtijd: {rit.Rijtijd} \t\n Palleten: {rit.Paletten} \n\t ---";
+                string body = "---";
+                foreach (var rit in listViewRitten)
+                {
+                    body +=
+                        $"\t\n Klant: {rit.KlantNaam} \t\n Plaats: {rit.Plaats} \t\n Km: {rit.Kilometers} \t\n Aankomst: {(rit.Aankomst).ToString("HH:mm")} \t\n Vertrek: {rit.Vertrek.ToString("HH:mm")} \t\n Werktijd: {rit.Werktijd} \t\n Rijtijd: {rit.Rijtijd} \t\n Palleten: {rit.Paletten} \n\t ---";
+                }
+
+
+
+                await Email.ComposeAsync("Ritverslag", body);
             }
-
-
-
-            await Email.ComposeAsync("Ritverslag",body);
+            else
+            {
+                
+            }
         }
+
         public ICommand CommandNieuwRitVerslag => new Command(DeleteRitVerslag);
         private void DeleteRitVerslag()
         {

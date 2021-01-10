@@ -30,7 +30,7 @@ namespace AppTransport.Views
             {
                 if (await VallidationRegistrerenAsync())
                 {
-                    Console.WriteLine("Error: Input not Valid");
+
                 }
                 else
                 {

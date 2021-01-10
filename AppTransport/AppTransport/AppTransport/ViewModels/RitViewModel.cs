@@ -101,7 +101,7 @@ namespace AppTransport.ViewModels
         private List<Klant> klantenList { get; set; } = new List<Klant>();
         public  List<Klant> KlantenList
         {
-            get
+            get  
             {
                 Inladen();
                 return klantenList.OrderBy(x => x.Naam).ToList();
