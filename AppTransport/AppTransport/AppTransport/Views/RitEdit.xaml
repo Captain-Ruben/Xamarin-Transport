@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTransport.Views.RitEdit">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+                <Frame BackgroundColor="#029fd6" 
+                       VerticalOptions="Start">
+
+                    <Label Text="{Binding KlantNaam}" 
+                           FontSize="Title" 
+                           HorizontalOptions="Center" 
+                           TextColor="Snow"/>
+
+                </Frame>
+            </StackLayout>
+
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Id" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding RitId}" 
+                           Placeholder="Id" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375"
+                           IsReadOnly="True"
+                           BackgroundColor="LightGray">
+                    </Entry>
+                    <Label Text="Klant" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding KlantNaam}" 
+                           Placeholder="Klant" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375"
+                           IsReadOnly="True"
+                           BackgroundColor="LightGray">
+                    </Entry>
+                    <Label Text="Adres" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Plaats}" 
+                           Placeholder="Adres" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375"
+                           IsReadOnly="True"
+                           BackgroundColor="LightGray">
+                    </Entry>
+                    <Label Text="Kilometers" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Kilometers}" 
+                       Placeholder="Kilometers" 
+                       HorizontalOptions="Center" 
+                       WidthRequest="375">
+                    </Entry>
+                    <Label Text="Aankomst" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Aankomst}" 
+                           Placeholder="Aankomst" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375">
+                    </Entry>
+                    <Label Text="Vertrek" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Vertrek}" 
+                           Placeholder="Vertrek" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375">
+                    </Entry>
+                    <Label Text="Werktijd" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Werktijd}" 
+                           Placeholder="Werktijd" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375"
+                           IsReadOnly="True"
+                           BackgroundColor="LightGray">
+                    </Entry>
+                    <Label Text="Rijtijd" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Rijtijd}" 
+                           Placeholder="Rijtijd" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375"
+                           IsReadOnly="True"
+                           BackgroundColor="LightGray">
+                    </Entry>
+                    <Label Text="Paletten" Margin="10,0,0,0"></Label>
+                    <Entry Text="{Binding Paletten}" 
+                           Placeholder="Paletten" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="375">
+                    </Entry>
+
+                    <Button 
+                        BackgroundColor="#029fd6" 
+                        TextColor="Snow" 
+                        HorizontalOptions="Center" 
+                        Text="Rit Bewerken"
+                        Command="{Binding CommandBewerkenRit}">
+                    </Button>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

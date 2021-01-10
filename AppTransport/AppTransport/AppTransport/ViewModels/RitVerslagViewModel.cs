@@ -7,81 +7,23 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AppTransport.ViewModels
 {
     class RitVerslagViewModel : INotifyPropertyChanged
     {
+
+        #region Ctor
+
         public RitVerslagViewModel()
         {
             Inladen();
         }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        
-        private string searchbarText;
-        public string SearchbarText
-        {
-            get { return searchbarText; }
-            set 
-            { 
-                searchbarText = value;
-                listViewRitten = null;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten))); }
-        }
-
-        private List<Rit> listViewRitten;
-        public List<Rit> ListViewRitten
-        {
-            get
-            {
-                if (listViewRitten == null)
-                {
-                    Inladen(searchbarText);
-                    return listViewRitten;
-                }
-                else
-                {
-                    //Inladen();
-                    return listViewRitten;
-                }
-
-            }
-
-            set
-            {
-                listViewRitten = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
-            }
-        }
-
-
-        public ICommand CommandToevoegenRit => new Command(RitToevoegenButtonAsync);
-        private async void RitToevoegenButtonAsync()
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new RitToevoegen());
-        }
-        public ICommand CommandMailRitVerslag => new Command(MailButton);
-        private void MailButton() 
-        {
-            
-        }
-        public ICommand CommandNieuwRitVerslag => new Command(DeleteRitVerslag);
-        private void DeleteRitVerslag()
-        {
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.DropTable<Rit>();
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
-            }
-        }
-
-
         private void Inladen()
         {
-            
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<Rit>();
@@ -102,8 +44,94 @@ namespace AppTransport.ViewModels
                     .OrderBy(x => x.RitId)
                     .ToList();
 
+                //PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
+            }
+        }
+
+        #endregion
+
+        #region Prop
+
+        private string searchbarText;
+        public string SearchbarText
+        {
+            get { return searchbarText; }
+            set
+            {
+                searchbarText = value;
+                listViewRitten = null;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
             }
         }
+
+        private List<Rit> listViewRitten;
+        public List<Rit> ListViewRitten
+        {
+            get
+            {
+                if (listViewRitten == null)
+                {
+                    Inladen(searchbarText);
+                    return listViewRitten;
+                }
+                else
+                {
+                    Inladen();
+                    return listViewRitten;
+                }
+
+            }
+
+            set
+            {
+                listViewRitten = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+
+        #region Commands
+
+        public ICommand CommandToevoegenRit => new Command(RitToevoegenButtonAsync);
+        private async void RitToevoegenButtonAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new RitToevoegen());
+        }
+        public ICommand CommandMailRitVerslag => new Command(MailButtonAsync);
+        private async void MailButtonAsync() 
+        {
+            string body = "---";
+            foreach (var rit in listViewRitten)
+            {
+                body += 
+                    $"\t\n Klant: {rit.KlantNaam} \t\n Plaats: {rit.Plaats} \t\n Km: {rit.Kilometers} \t\n Aankomst: {(rit.Aankomst).ToString("HH:mm")} \t\n Vertrek: {rit.Vertrek.ToString("HH:mm")} \t\n Werktijd: {rit.Werktijd} \t\n Rijtijd: {rit.Rijtijd} \t\n Palleten: {rit.Paletten} \n\t ---";
+            }
+
+
+
+            await Email.ComposeAsync("Ritverslag",body);
+        }
+        public ICommand CommandNieuwRitVerslag => new Command(DeleteRitVerslag);
+        private void DeleteRitVerslag()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.DropTable<Rit>();
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ListViewRitten)));
+            }
+        }
+        public ICommand CommandEditRit => new Command(EditRitAsync);
+        private async void EditRitAsync(object obj)
+        {
+            Console.WriteLine(obj);
+            await Application.Current.MainPage.Navigation.PushAsync(new RitEdit(obj));
+        }
+
+        #endregion
+
+
     }
 }

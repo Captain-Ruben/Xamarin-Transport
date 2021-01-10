@@ -1,0 +1,22 @@
+﻿using AppTransport.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace AppTransport.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RitEdit : ContentPage
+    {
+        public RitEdit(object obj)
+        {
+            InitializeComponent();
+            BindingContext = new RitEditViewModel(obj) ;
+        }
+    }
+}

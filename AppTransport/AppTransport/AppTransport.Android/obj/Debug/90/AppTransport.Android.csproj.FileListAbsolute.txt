@@ -15,9 +15,16 @@ C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\Ap
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res.flag
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\13\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\14\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\18\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\20\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\27\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\31\jl\files.cache
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\33\jl\files.cache
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\34\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\35\jl\files.cache
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\39\jl\files.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\40\jl\files.cache
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\R.txt
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\R.cs.flag
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\AppTransport.Android.csproj.CoreCompileInputs.cache
@@ -44,6 +51,8 @@ C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\Ap
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res\drawable\delete.png
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\res\drawable\edit.png
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\uploadflags.txt
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\android\assets\AppTransport.Android.dll
@@ -498,10 +507,3 @@ C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\Ap
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\14\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\18\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\20\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\27\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\31\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\35\jl\files.cache
-C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport.Android\obj\Debug\90\lp\40\jl\files.cache

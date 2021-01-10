@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="ThisPage"
+             
              x:Class="AppTransport.Views.RitVerslag">
+
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
@@ -24,20 +27,33 @@
                           ItemsSource="{Binding ListViewRitten}"
                           Margin="10"
                           SeparatorColor="#029fd6"
-                          SelectedItem="{Binding }">
+                          SelectedItem="{Binding }"
+                          HorizontalOptions="Start">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <Label Text="{Binding KlantNaam}" FontSize="Title"></Label>
-                                </StackLayout>
+                                <Grid HorizontalOptions="Start">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label  HorizontalOptions="StartAndExpand" Grid.Column="0" Text="{Binding KlantNaam}" FontSize="Title" ></Label>
+
+                                    <ImageButton Command="{Binding Source={x:Reference ThisPage},Path= BindingContext.CommandEditRit}"
+                                                 CommandParameter="{Binding RitId}"
+                                                 Source="edit.png" 
+                                                 Grid.Column="1" 
+                                                 HorizontalOptions="End" 
+                                                 BackgroundColor="Transparent"/>
+
+                                </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
-                <Button Text="Mailen"
+                <Button Text="Mail"
                         BackgroundColor="#029fd6"
                         TextColor="Snow"
                         Command="{Binding CommandMailRitVerslag}">
@@ -49,7 +65,7 @@
                         Command="{Binding CommandToevoegenRit}">
                 </Button>
                 
-                <Button Text="Nieuw"
+                <Button Text="Nieuw Ritverslag"
                         BackgroundColor="#029fd6"
                         TextColor="Snow"
                         Command="{Binding CommandNieuwRitVerslag}">
