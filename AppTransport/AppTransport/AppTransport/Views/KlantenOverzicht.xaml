@@ -24,7 +24,7 @@
                       ItemsSource="{Binding Klanten}"
                       Margin="10" 
                       SelectedItem="{Binding KlantGeselecteerd}"
-                      ItemSelected="{Binding Source={x:Reference ThisPage},Path= BindingContext.KlantGeselecteerdCommand}">
+                      >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
