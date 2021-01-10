@@ -30,14 +30,10 @@
                             <Entry IsPassword="True" x:Name="UserWachtwoord"/>
 
                             <Button Text="Login" 
-                            BackgroundColor="#029fd6" 
-                            TextColor="#eeeff3"
                             Command="{Binding LoginButton}"/>
 
 
                             <Button x:Name="btnAccountBeheer" Text="Registreren" 
-                            BackgroundColor="#eeeff3" 
-                            TextColor="#029fd6"
                             Command="{Binding AccountButton}"/>
 
                         </StackLayout>

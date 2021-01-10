@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppTransport.Views.RitToevoegen">
     <ContentPage.Content>
+        
         <StackLayout>
             
             <StackLayout>
@@ -33,15 +34,12 @@
                              HorizontalOptions="Center">
 
                     <Button Command="{Binding ButtonKlanten}" 
-                            BackgroundColor="#029fd6" 
-                            TextColor="Snow" HorizontalOptions="End" 
+                            HorizontalOptions="End" 
                             Text="Klanten Beheren" 
                             WidthRequest="150">
                     </Button>
 
                     <Button Command="{Binding ButtonKlantenUpdate}" 
-                            BackgroundColor="#029fd6" 
-                            TextColor="Snow" 
                             HorizontalOptions="End" 
                             Text="Klanten Updaten" 
                             WidthRequest="150">
@@ -63,8 +61,6 @@
                         </Entry>
 
                         <Button Command="{Binding ButtonTimeNowAankomst}"  
-                                BackgroundColor="#029fd6" 
-                                TextColor="Snow"
                                 HorizontalOptions="End" 
                                 Text="Nu" 
                                 WidthRequest="150">
@@ -78,8 +74,6 @@
                         </Entry>
 
                         <Button Command="{Binding ButtonTimeNowVertrek}" 
-                                BackgroundColor="#029fd6" 
-                                TextColor="Snow" 
                                 HorizontalOptions="End" 
                                 Text="Nu" 
                                 WidthRequest="150">
@@ -103,8 +97,6 @@
                 </StackLayout>
                 
                 <Button Command="{Binding ButtonOpslaan}" 
-                        BackgroundColor="#029fd6" 
-                        TextColor="Snow" 
                         HorizontalOptions="Center" 
                         Text="Rit Opslaan">
                 </Button>

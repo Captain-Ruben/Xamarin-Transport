@@ -85,8 +85,6 @@
                     </Entry>
 
                     <Button 
-                        BackgroundColor="#029fd6" 
-                        TextColor="Snow" 
                         HorizontalOptions="Center" 
                         Text="Rit Bewerken"
                         Command="{Binding CommandBewerkenRit}">

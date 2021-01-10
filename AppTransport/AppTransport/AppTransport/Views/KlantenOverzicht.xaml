@@ -13,9 +13,9 @@
                         <Entry Placeholder="Plaats" Margin="10" Text="{Binding KlantPlaats}" PlaceholderColor="#eeeff3" TextColor="#eeeff3"></Entry>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Button Command="{Binding KlantBewerkenCommand}" Text="Aanpassen" BackgroundColor="#029fd6" TextColor="#eeeff3"/>
-                        <Button Command="{Binding KlantToevoegenCommand}" Text="Toevoegen" BackgroundColor="#eeeff3" TextColor="#029fd6"/>
-                        <Button Command="{Binding KlantVerwijderenCommand}" Text="Verwijderen" BackgroundColor="#029fd6" TextColor="#eeeff3"/>
+                        <Button Command="{Binding KlantBewerkenCommand}" Text="Aanpassen"/>
+                        <Button Command="{Binding KlantToevoegenCommand}" Text="Toevoegen"/>
+                        <Button Command="{Binding KlantVerwijderenCommand}" Text="Verwijderen"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>

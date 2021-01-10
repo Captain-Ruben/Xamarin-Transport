@@ -145,7 +145,5 @@ namespace AppTransport.ViewModels
 
 
         #endregion
-
-
     }
 }

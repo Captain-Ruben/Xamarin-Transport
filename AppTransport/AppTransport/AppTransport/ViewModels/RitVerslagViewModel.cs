@@ -91,6 +91,29 @@ namespace AppTransport.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private bool switchToggled = Preferences.Get("Visible", false);
+
+        public bool SwitchToggled
+        {
+            get 
+            { 
+                return Preferences.Get("Visible", switchToggled);
+            }
+            set 
+            {
+                switchToggled = value;
+                Preferences.Set("Visible", value);
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(IsVisibleButtons)));
+            }
+        }
+
+        public bool IsVisibleButtons
+        {
+            get { return switchToggled; }
+            set { switchToggled = value; }
+        }
+
+
         #endregion
 
         #region Commands
@@ -131,7 +154,6 @@ namespace AppTransport.ViewModels
         }
 
         #endregion
-
 
     }
 }

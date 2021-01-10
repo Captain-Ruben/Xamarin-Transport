@@ -8,6 +8,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
+
                 <Frame BackgroundColor="#029fd6" 
                        VerticalOptions="Start">
 
@@ -18,10 +19,13 @@
 
                 </Frame>
 
-                <SearchBar SearchCommand="{Binding CommandSearchbarChanged}" 
-                           Text="{Binding SearchbarText}"
-                           HorizontalOptions="Center">
-                </SearchBar>
+                <StackLayout Orientation="Horizontal">
+                    <SearchBar SearchCommand="{Binding CommandSearchbarChanged}" 
+                               Text="{Binding SearchbarText}"
+                               HorizontalOptions="Start">
+                    </SearchBar>
+                    <Switch IsToggled="{Binding SwitchToggled}"></Switch>
+                </StackLayout>
 
                 <ListView x:Name="lstRitten"                     
                           ItemsSource="{Binding ListViewRitten}"
@@ -54,21 +58,17 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
                 <Button Text="Mail"
-                        BackgroundColor="#029fd6"
-                        TextColor="Snow"
-                        Command="{Binding CommandMailRitVerslag}">
+                        Command="{Binding CommandMailRitVerslag}"
+                        IsVisible="{Binding IsVisibleButtons}">
                 </Button>
                 
                 <Button Text="Toevoegen"
-                        BackgroundColor="#029fd6"
-                        TextColor="Snow"
                         Command="{Binding CommandToevoegenRit}">
                 </Button>
                 
                 <Button Text="Nieuw Ritverslag"
-                        BackgroundColor="#029fd6"
-                        TextColor="Snow"
-                        Command="{Binding CommandNieuwRitVerslag}">
+                        Command="{Binding CommandNieuwRitVerslag}"
+                        IsVisible="{Binding IsVisibleButtons}">
                 </Button>
 
                 <StackLayout></StackLayout>

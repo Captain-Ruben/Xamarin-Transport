@@ -28,10 +28,6 @@ namespace AppTransport.Views
             var current = Connectivity.NetworkAccess;
             if (current == NetworkAccess.Internet)
             {
-                await DisplayAlert("Error", "Geen Internetverbinding", "OK");
-            }
-            else
-            {
                 if (await VallidationRegistrerenAsync())
                 {
                     Console.WriteLine("Error: Input not Valid");
@@ -50,6 +46,11 @@ namespace AppTransport.Views
 
                     await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new UserLogin()));
                 }
+                
+            }
+            else
+            {
+                await DisplayAlert("Error", "Geen Internetverbinding", "OK");
             }
             
         }

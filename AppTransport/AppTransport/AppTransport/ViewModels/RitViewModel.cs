@@ -116,6 +116,7 @@ namespace AppTransport.ViewModels
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
+                conn.CreateTable<Klant>(); 
                 conn.Table<Klant>();
                 klantenList = conn.Table<Klant>().ToList();
             }

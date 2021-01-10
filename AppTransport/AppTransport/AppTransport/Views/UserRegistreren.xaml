@@ -36,8 +36,6 @@
                    x:Name="Wachtwoord_R2"/>
 
                 <Button Text="Registreren" 
-                    BackgroundColor="#029fd6" 
-                    TextColor="#eeeff3"
                     Command="{Binding RegistrerenButton}"/>
 
             </StackLayout>
