@@ -16,7 +16,5 @@ Met deze app zou ik graag het papier werk van mijn vader wegnemen.
 
 
 ### Wanneer de levering bij alle klanten is gebeurd:
-- Moet er een excel bestand gemaakt worden met alle ritten (hierboven vermeld) in.
 - Moet er een mogelijkheid zijn om dit ritverslag te versturen zijn naar de baas van het bedrijf.
-- Moet dit ritverslag 30dagen opgeslagen blijven zodat dit nog opvraagbaar blijft.
 
