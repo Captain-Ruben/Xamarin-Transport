@@ -17,3 +17,7 @@ C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\Ap
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\Views\RitVerslag.xaml.g.cs
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\Views\RitEdit.xaml.g.cs
 C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.csprojAssemblyReference.cache
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\ruben\Documents\GitHub\MobileApp-Transport\AppTransport\AppTransport\AppTransport\obj\Debug\netstandard2.0\AppTransport.csproj.CopyComplete

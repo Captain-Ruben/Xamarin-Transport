@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,24 +25,33 @@ namespace AppTransport.Views
 
         public async void RegistrerenDatabase()
         {
-            if (await VallidationRegistrerenAsync())
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet)
             {
-                Console.WriteLine("Error: Input not Valid");
+                await DisplayAlert("Error", "Geen Internetverbinding", "OK");
             }
             else
             {
-                FirebaseClient firebaseClient = new FirebaseClient("https://extrade-681e6-default-rtdb.firebaseio.com/");
-                await firebaseClient
-                    .Child("Users")
-                    .PostAsync(new User() { UserNaam = UserName_R.Text, UserWachtwoord = Wachtwoord_R.Text, Email = Email_R.Text });
+                if (await VallidationRegistrerenAsync())
+                {
+                    Console.WriteLine("Error: Input not Valid");
+                }
+                else
+                {
+                    FirebaseClient firebaseClient = new FirebaseClient("https://extrade-681e6-default-rtdb.firebaseio.com/");
+                    await firebaseClient
+                        .Child("Users")
+                        .PostAsync(new User() { UserNaam = UserName_R.Text, UserWachtwoord = Wachtwoord_R.Text, Email = Email_R.Text });
 
-                UserName_R.Text = "";
-                Wachtwoord_R.Text = "";
-                Email_R.Text = "";
-                Wachtwoord_R2.Text = "";
+                    UserName_R.Text = "";
+                    Wachtwoord_R.Text = "";
+                    Email_R.Text = "";
+                    Wachtwoord_R2.Text = "";
 
-                await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new UserLogin()));
+                    await Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new UserLogin()));
+                }
             }
+            
         }
 
         public async Task<bool> VallidationRegistrerenAsync()

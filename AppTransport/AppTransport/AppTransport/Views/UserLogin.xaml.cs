@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -30,33 +31,43 @@ namespace AppTransport.Views
 
         private async void LoginToApp()
         {
-            if (UserNaam.Text == null || UserWachtwoord.Text == null)
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet)
             {
-                UserNaam.Text = "";
-                UserWachtwoord.Text = "";
-            }
+                if (UserNaam.Text == null || UserWachtwoord.Text == null)
+                {
+                    UserNaam.Text = "";
+                    UserWachtwoord.Text = "";
+                }
 
-            User user = new User
-            {
-                UserNaam = UserNaam.Text,
-                UserWachtwoord = UserWachtwoord.Text,
-            };
+                User user = new User
+                {
+                    UserNaam = UserNaam.Text,
+                    UserWachtwoord = UserWachtwoord.Text,
+                };
 
-            FirebaseClient firebaseClient = new FirebaseClient("https://extrade-681e6-default-rtdb.firebaseio.com/");
+                FirebaseClient firebaseClient = new FirebaseClient("https://extrade-681e6-default-rtdb.firebaseio.com/");
 
-            var GetUser = (await firebaseClient
-                                 .Child("Users")
-                                 .OnceAsync<User>()).Where(x => x.Object.UserNaam == user.UserNaam).Where(x => x.Object.UserWachtwoord == user.UserWachtwoord);
+                var GetUser = (await firebaseClient
+                                     .Child("Users")
+                                     .OnceAsync<User>()).Where(x => x.Object.UserNaam == user.UserNaam).Where(x => x.Object.UserWachtwoord == user.UserWachtwoord);
 
 
-            if (GetUser.Count() > 0)
-            {
-                await Application.Current.MainPage.Navigation.PushAsync(new RitVerslag());
+                if (GetUser.Count() > 0)
+                {
+                    await Application.Current.MainPage.Navigation.PushAsync(new RitVerslag());
+                }
+                else
+                {
+                    await DisplayAlert("Login Fout", "De Inloggegevens kloppen niet probeer het opnieuw", "OK");
+                }
+                
             }
             else
-            { 
-                await DisplayAlert("Login Fout", "De Inloggegevens kloppen niet probeer het opnieuw", "OK");
+            {
+                await DisplayAlert("Login Fout", "Geen Internetverbinding", "OK");
             }
+            
         }
     }
 

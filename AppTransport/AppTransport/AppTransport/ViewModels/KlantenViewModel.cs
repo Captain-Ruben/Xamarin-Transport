@@ -18,6 +18,9 @@ namespace AppTransport.ViewModels
         public ICommand KlantToevoegenCommand => new Command(ToevoegenKlant);
         public ICommand KlantVerwijderenCommand => new Command(VerwijderenKlant);
         public ICommand KlantBewerkenCommand => new Command(EditKlant);
+        public ICommand KlantGeselecteerdCommand => new Command(SelecteerdeKlant);
+
+  
 
         #endregion
 
@@ -140,6 +143,16 @@ namespace AppTransport.ViewModels
 
             }
 
+        }
+
+        //Selecteerd 
+        private void SelecteerdeKlant()
+        {
+            KlantNaam = KlantGeselecteerd.Naam;
+            KlantPlaats = KlantGeselecteerd.Plaats;
+
+            PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantNaam)));
+            PropertyChanged(this, new PropertyChangedEventArgs(nameof(KlantPlaats)));
         }
 
         #endregion
