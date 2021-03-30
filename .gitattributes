@@ -1,2 +1,2 @@
-linguist-detectable = true
+linguist-detectable == true
 *.c++ linguist-language=C#
