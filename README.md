@@ -11,12 +11,8 @@ With this app I would like to take away my father's paperwork.
 - Be able to register departure with this customer.
 - Record the working time for how long has the user been with the customer.
 - Indicate the number of pallets and save them.
-
-<br/>
-
   (All this is repeated with every customer and every journey.)
-
-
+  
 ### When the delivery has been made to all customers:
 - There must be a possibility to send this trip report to the boss of the company.
 
