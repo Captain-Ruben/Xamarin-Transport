@@ -12,6 +12,7 @@ With this app I would like to take away my father's paperwork.
 - Record the working time for how long has the user been with the customer.
 - Indicate the number of pallets and save them.
 
+<br/>
 
   (All this is repeated with every customer and every journey.)
 
