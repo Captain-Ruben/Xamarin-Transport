@@ -1,22 +1,22 @@
-# C# Mobile Project 2020
+# C# Mobile Project 2020 
 ## The Pitch
-Mijn app is bedoeld voor mijn vader hij werkt in de transport als vrachtwagenchauffeur.
-Hij moet dagelijks zijn ritverslagen bijhouden en hij doet dit momenteel op papier.
-Met deze app zou ik graag het papier werk van mijn vader wegnemen. 
+My app is intended for my father, he works in transport as a truck driver.
+He has to keep his trip reports daily and he is currently doing this on paper.
+With this app I would like to take away my father's paperwork. 
 
-## Uitleg Project
+## Explanation Project
 
-### De toepassingen dat deze app moet bevatten zijn:
-- Aankomst bij een klant registreren (tijd) en een dropdown menu van welke klant. 
-- Vertrek bij deze klant kunnen registreren.
-- De werktijd registreren hoelang is de gebruiker bij de klant geweest. 
-- Het aantal palleten aan kunnen duiden en deze opslaan.
+### The applications that this app should contain are:
+- Register arrival at a customer (time) and a dropdown menu of which customer.
+- Be able to register departure with this customer.
+- Record the working time for how long has the user been with the customer.
+- Indicate the number of pallets and save them.
 
-  Dit alles herhaald zich bij elke klant en bij elke rit.
+  (All this is repeated with every customer and every journey.)
 
 
-### Wanneer de levering bij alle klanten is gebeurd:
-- Moet er een mogelijkheid zijn om dit ritverslag te versturen zijn naar de baas van het bedrijf.
+### When the delivery has been made to all customers:
+- There must be a possibility to send this trip report to the boss of the company.
 
-## Video 
-https://www.youtube.com/watch?v=272hji1JOac
+## Video
+https://www.youtube.com/watch?v=272hji1JOac 
