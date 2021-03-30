@@ -8,4 +8,5 @@ linguist-detectable = true
 *.xml linguist-detectable=false 
 *.c++ linguist-detectable=false
 *.java linguist-detectable=false
-
+*.assembly linguist-detectable=false
+*.pawn linguist-detectable=false
