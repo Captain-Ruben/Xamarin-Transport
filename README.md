@@ -1,20 +1,27 @@
-# C# Mobile Project 2020 
-## The Pitch
-My app is intended for my father, he works in transport as a truck driver.
-He has to keep his trip reports daily and he is currently doing this on paper.
-With this app I would like to take away my father's paperwork. 
+---
 
-## Explanation Project
+# C# Mobile Project 2020
 
-### The applications that this app should contain are:
-- Register arrival at a customer (time) and a dropdown menu of which customer.
-- Be able to register departure with this customer.
-- Record the working time for how long has the user been with the customer.
-- Indicate the number of pallets and save them.
-  (All this is repeated with every customer and every journey.)
+## First Project  
+This app, created using Xamarin, is one of the first projects I built early in my career.
+
+## The Pitch  
+The app was designed with my father in mind, who works as a truck driver in the transport industry. He currently records his trip reports on paper. With this app, my goal is to simplify and eliminate the need for paper-based reports.
+
+## Project Overview
+
+### Core Features of the App:
+- **Arrival Registration:** Track arrival time at each customer with a dropdown menu for selecting the customer.
+- **Departure Registration:** Log the departure time for each customer.
+- **Work Time Tracker:** Record the amount of time spent with each customer.
+- **Pallet Count:** Keep track of the number of pallets delivered, and save this data.
   
-### When the delivery has been made to all customers:
-- There must be a possibility to send this trip report to the boss of the company.
+  (This process is repeated for every customer and each trip.)
 
-## Video
-https://www.youtube.com/watch?v=272hji1JOac 
+### Post-Delivery Functionality:
+- After all deliveries are completed, the app allows the user to send a trip report directly to the company boss.
+
+## Video  
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=272hji1JOac)
+
+---
